@@ -1,0 +1,60 @@
+实验报告模板.doc
+
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ==================== 虚拟环境 ====================
+.venv/
+venv/
+env/
+ENV/
+
+# ==================== 系统 / 编辑器 ====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ==================== 日志 ====================
+# *.log
+# 注意：task6_translation/output/ 已被整体忽略，train.log 不会进库
+
+# ==================== 大体积原始数据 ====================
+# 课程提供的《红楼梦》全文（约数 MB，GB18030 编码）
+# 红楼梦.txt
+# 清华 THUOCL 词库（多个大文件）
+# THUOCL：清华大学开放中文词库/
+# OPUS-100 原始 parquet 与抽取出的训练/验证集
+task6_translation/data/opus100_train.parquet
+task6_translation/data/train.tsv
+task6_translation/data/valid.tsv
+# 若希望保留小样本，可显式放行（此处示例：保留《红楼梦》选段）
+!task6_translation/data/hongloumeng_sample.txt
+
+# ==================== 模型权重 ====================
+# 下载的预训练模型 + 微调产物（体积大，不应入库）
+task6_translation/models/
+
+# ==================== 生成输出 ====================
+# 摘要结果
+task5_summarization/output/*
+# 翻译结果 + 训练日志
+task6_translation/output/*
+# 用 .gitkeep 占位，保持目录结构
+!task5_summarization/output/.gitkeep
+!task6_translation/output/.gitkeep
